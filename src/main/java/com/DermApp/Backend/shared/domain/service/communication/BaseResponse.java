@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.apache.logging.log4j.util.Strings;
 
 @Getter
-public class BaseResponse<T> {
+public abstract class BaseResponse<T> {
 
     private boolean success;
     private String message;
