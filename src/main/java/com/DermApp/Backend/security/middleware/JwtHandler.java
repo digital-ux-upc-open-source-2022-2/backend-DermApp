@@ -30,6 +30,7 @@ public class JwtHandler {
         Date issuedAt = new Date();
 
         Date expiration = DateUtils.addDays(issuedAt, expirationDays);
+
         Key secretKey = Keys.hmacShaKeyFor(secret.getBytes());
         return Jwts.builder()
                 .setSubject(subject)
