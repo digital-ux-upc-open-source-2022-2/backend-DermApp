@@ -1,4 +1,4 @@
-package com.DermApp.Backend.diagnosticIllness.domain.model.entity;
+package com.DermApp.Backend.diagnostic.domain.model.entity;
 
 import com.DermApp.Backend.shared.domain.model.AuditModel;
 import lombok.*;

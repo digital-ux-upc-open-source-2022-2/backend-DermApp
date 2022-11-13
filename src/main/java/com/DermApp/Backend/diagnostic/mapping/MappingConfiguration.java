@@ -1,4 +1,4 @@
-package com.DermApp.Backend.diagnosticIllness.mapping;
+package com.DermApp.Backend.diagnostic.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

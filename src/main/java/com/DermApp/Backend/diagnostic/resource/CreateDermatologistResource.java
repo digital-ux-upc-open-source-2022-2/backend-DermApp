@@ -1,15 +1,15 @@
-package com.DermApp.Backend.diagnosticIllness.resource;
+package com.DermApp.Backend.diagnostic.resource;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.*;
 
 @Getter
 @Setter
-public class UpdateDermatologistResource {
-
-     private Long id;
+@With
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateDermatologistResource {
 
     @NotNull
     @NotBlank

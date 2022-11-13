@@ -1,7 +1,7 @@
-package com.DermApp.Backend.diagnosticIllness.mapping;
+package com.DermApp.Backend.diagnostic.mapping;
 
-import com.DermApp.Backend.diagnosticIllness.domain.model.entity.Patient;
-import com.DermApp.Backend.diagnosticIllness.resource.*;
+import com.DermApp.Backend.diagnostic.domain.model.entity.Patient;
+import com.DermApp.Backend.diagnostic.resource.*;
 import com.DermApp.Backend.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

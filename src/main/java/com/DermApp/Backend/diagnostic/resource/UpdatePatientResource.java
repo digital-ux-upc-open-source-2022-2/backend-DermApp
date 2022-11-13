@@ -1,15 +1,16 @@
-package com.DermApp.Backend.diagnosticIllness.resource;
+package com.DermApp.Backend.diagnostic.resource;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.*;
 
 @Getter
 @Setter
-@With
-@AllArgsConstructor
-@NoArgsConstructor
-public class CreatePatientResource {
+public class UpdatePatientResource {
+
+    private Long id;
+
     @NotNull
     @NotBlank
     @Size(max = 60)

@@ -1,10 +1,10 @@
-package com.DermApp.Backend.diagnosticIllness.api.rest;
+package com.DermApp.Backend.diagnostic.api.rest;
 
-import com.DermApp.Backend.diagnosticIllness.domain.service.PatientService;
-import com.DermApp.Backend.diagnosticIllness.mapping.PatientMapper;
-import com.DermApp.Backend.diagnosticIllness.resource.CreatePatientResource;
-import com.DermApp.Backend.diagnosticIllness.resource.PatientResource;
-import com.DermApp.Backend.diagnosticIllness.resource.UpdatePatientResource;
+import com.DermApp.Backend.diagnostic.domain.service.PatientService;
+import com.DermApp.Backend.diagnostic.mapping.PatientMapper;
+import com.DermApp.Backend.diagnostic.resource.CreatePatientResource;
+import com.DermApp.Backend.diagnostic.resource.PatientResource;
+import com.DermApp.Backend.diagnostic.resource.UpdatePatientResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
