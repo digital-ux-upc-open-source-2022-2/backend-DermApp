@@ -28,8 +28,6 @@ public class Dermatologist extends AuditModel {
 
     private int age;
 
-    @Size(max = 60)
-    private String password;
 
     @Size(max = 240)
     private String address;
