@@ -32,12 +32,11 @@ public class PatientStepDefinitions {
 
 
 
-    @And("A Patient Resource is included in Response Body, with values {string}, {int}, {string}, {string}, {string}")
-    public void aPatientResourceIsIncludedInResponseBodyWithValues(String name, int age, String password, String address, String description) {
+    @And("A Patient Resource is included in Response Body, with values {string}, {int}, {string}, {string}")
+    public void aPatientResourceIsIncludedInResponseBodyWithValues(String name, int age, String address, String description) {
         PatientResource expectedResource = new PatientResource()
                 .withName(name)
                 .withAge(age)
-                .withPassword(password)
                 .withAddress(address)
                 .withDescription(description);
         String value = responseEntity.getBody();
@@ -53,12 +52,11 @@ public class PatientStepDefinitions {
         assertThat(expectedResource).usingRecursiveComparison().isEqualTo(actualResource);
     }
 
-    @Given("A Patient Resource with values {string}, {int}, {string}, {string}, {string} is already stored")
-    public void aPatientResourceWithValuesIsAlreadyStored(String name, int age, String password, String address, String description) {
+    @Given("A Patient Resource with values {string}, {int}, {string}, {string} is already stored")
+    public void aPatientResourceWithValuesIsAlreadyStored(String name, int age, String address, String description) {
         CreatePatientResource resource = new CreatePatientResource()
                 .withName(name)
                 .withAge(age)
-                .withPassword(password)
                 .withAddress(address)
                 .withDescription(description);
         HttpHeaders headers = new HttpHeaders();

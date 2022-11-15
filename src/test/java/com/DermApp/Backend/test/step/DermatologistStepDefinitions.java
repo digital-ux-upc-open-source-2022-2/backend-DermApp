@@ -37,12 +37,11 @@ public class DermatologistStepDefinitions {
         testRestTemplate = new TestRestTemplate();
     }
 
-    @When("A post Request is sent with values {string}, {int}, {string}, {string}, {string}")
-    public void aPostRequestIsSentWithValues(String name, int age, String password, String address, String description) {
+    @When("A post Request is sent with values {string}, {int}, {string}, {string}")
+    public void aPostRequestIsSentWithValues(String name, int age, String address, String description) {
         CreateDermatologistResource resource = new CreateDermatologistResource()
                 .withName(name)
                 .withAge(age)
-                .withPassword(password)
                 .withAddress(address)
                 .withDescription(description);
         HttpHeaders headers = new HttpHeaders();
@@ -57,12 +56,11 @@ public class DermatologistStepDefinitions {
         assertThat(expectedStatusCode).isEqualTo(actualStatusCode);
     }
 
-    @And("A Dermatologist Resource is included in Response Body, with values {string}, {int}, {string}, {string}, {string}")
-    public void aDermatologistResourceIsIncludedInResponseBodyWithValues(String name, int age, String password, String address, String description) {
+    @And("A Dermatologist Resource is included in Response Body, with values {string}, {int}, {string}, {string}")
+    public void aDermatologistResourceIsIncludedInResponseBodyWithValues(String name, int age, String address, String description) {
         DermatologistResource expectedResource = new DermatologistResource()
                 .withName(name)
                 .withAge(age)
-                .withPassword(password)
                 .withAddress(address)
                 .withDescription(description);
         String value = responseEntity.getBody();
@@ -77,12 +75,11 @@ public class DermatologistStepDefinitions {
         expectedResource.setId(actualResource.getId());
         assertThat(expectedResource).usingRecursiveComparison().isEqualTo(actualResource);
     }
-    @Given("A Dermatologist Resource with values {string}, {int}, {string}, {string}, {string} is already stored")
-    public void aDermatologistResourceWithValuesIsAlreadyStored(String name, int age, String password, String address, String description) {
+    @Given("A Dermatologist Resource with values {string}, {int}, {string}, {string} is already stored")
+    public void aDermatologistResourceWithValuesIsAlreadyStored(String name, int age, String address, String description) {
         CreateDermatologistResource resource = new CreateDermatologistResource()
                 .withName(name)
                 .withAge(age)
-                .withPassword(password)
                 .withAddress(address)
                 .withDescription(description);
         HttpHeaders headers = new HttpHeaders();
