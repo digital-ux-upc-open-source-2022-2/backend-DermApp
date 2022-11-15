@@ -79,7 +79,6 @@ public class DermatologistServiceImpl implements DermatologistService {
                                 dermatologist.withName(request.getName())
                                         .withAge(request.getAge())
                                         .withAddress(request.getAddress())
-                                        .withPassword(request.getPassword())
                                         .withDescription(request.getDescription())))
                 .orElseThrow(() -> new ResourceNotFoundException(ENTITY, dermatologistId));
     }
