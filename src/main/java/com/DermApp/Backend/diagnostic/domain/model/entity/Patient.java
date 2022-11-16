@@ -50,7 +50,8 @@ public class Patient extends AuditModel {
 
     private String treatment;
 
-
+    @OneToOne(mappedBy = "patient")
+    private Chat chat;
 
 
 

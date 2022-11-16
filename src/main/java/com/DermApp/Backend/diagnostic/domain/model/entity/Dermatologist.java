@@ -53,5 +53,6 @@ public class Dermatologist extends AuditModel {
     @JsonIgnore
     private ListOfPatient listOfPatient;
 
-
+    @OneToOne(mappedBy = "dermatologist")
+    private Chat chat;
 }
