@@ -1,6 +1,7 @@
 package com.DermApp.Backend.diagnostic.domain.model.entity;
 
 import com.DermApp.Backend.shared.domain.model.AuditModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -52,6 +53,11 @@ public class Patient extends AuditModel {
 
     @OneToOne(mappedBy = "patient")
     private Chat chat;
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "file_id", nullable = false)
+    @JsonIgnore
+    private File file;
 
 
 
