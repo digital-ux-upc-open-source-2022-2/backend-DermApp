@@ -1,6 +1,7 @@
 package com.DermApp.Backend.diagnostic.domain.model.entity;
 
 import com.DermApp.Backend.shared.domain.model.AuditModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,4 +25,14 @@ public class ListOfPatient extends AuditModel {
             joinColumns = @JoinColumn(name = "list_of_patients_id"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
     private Set<Patient> patients = new HashSet<>();
+
+
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER, mappedBy = "listOfPatient")
+    //Many dermatologists will have a patient list
+    private Set<Dermatologist> dermatologists = new HashSet<>();
+
+
+
+
 }

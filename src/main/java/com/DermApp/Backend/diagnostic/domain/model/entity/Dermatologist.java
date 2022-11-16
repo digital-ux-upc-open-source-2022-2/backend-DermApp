@@ -1,12 +1,15 @@
 package com.DermApp.Backend.diagnostic.domain.model.entity;
 
 import com.DermApp.Backend.shared.domain.model.AuditModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -45,6 +48,10 @@ public class Dermatologist extends AuditModel {
 
     private String urlToImage;
 
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "list_of_patients_id", nullable = false)
+    @JsonIgnore
+    private ListOfPatient listOfPatient;
 
 
 }
