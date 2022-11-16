@@ -7,6 +7,8 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -28,9 +30,28 @@ public class Patient extends AuditModel {
 
     private int age;
 
+
+    private String gender;
+
+
     @Size(max = 240)
     private String address;
 
     @Size(max = 400)
     private String description;
+
+    private String message;
+
+    private String urlToImage;
+
+    private String status;
+
+    private String diagnostic;
+
+    private String treatment;
+
+
+
+
+
 }

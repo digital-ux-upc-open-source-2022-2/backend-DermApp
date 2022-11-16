@@ -26,13 +26,25 @@ public class Dermatologist extends AuditModel {
     @Size(max = 60)
     private String name;
 
+
     private int age;
 
+
+    private String gender;
+
+    private String specialty;
 
     @Size(max = 240)
     private String address;
 
     @Size(max = 400)
     private String description;
+
+
+    private String message;
+
+    private String urlToImage;
+
+
 
 }
