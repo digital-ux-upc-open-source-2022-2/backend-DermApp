@@ -14,7 +14,6 @@ public interface FileService {
     Page<File> getAll(Pageable pageable);
     File getById(Long fileId);
     File create(File file);
-    File update(Long fileId, File request);
     ResponseEntity<?> delete(Long fileId);
 
 }

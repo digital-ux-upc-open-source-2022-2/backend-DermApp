@@ -11,7 +11,5 @@ public interface ListOfPatientService {
     List<Patient> getAll();
     Page<Patient> getAll(Pageable pageable);
     Patient getById(Long patientId);
-    Patient create(Patient patient);
-    Patient update(Long patientId, Patient request);
-    ResponseEntity<?> delete(Long patientId);
+
 }

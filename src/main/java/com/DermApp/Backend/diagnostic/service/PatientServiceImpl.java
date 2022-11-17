@@ -62,7 +62,7 @@ public class PatientServiceImpl implements PatientService {
 
     @Override
     public Patient update(Long patientId, Patient request) {
-        Set<ConstraintViolation<Patient>> violations = validator.validate((request));
+        Set<ConstraintViolation<Patient>> violations = validator.validate(request);
 
         if(!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
