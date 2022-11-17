@@ -20,11 +20,17 @@ public class CreateDermatologistResource {
     @Min(18)
     private int age;
 
-    @Size(max = 60)
-    private String password;
+    private String gender;
+
+    private String specialty;
 
     @Size(max = 240)
     private String address;
+
+
+    private String message;
+
+    private String urlToImage;
 
     @Size(max = 400)
     private String description;

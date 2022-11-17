@@ -1,7 +1,7 @@
 package com.DermApp.Backend.diagnostic.api.rest;
 
 import com.DermApp.Backend.diagnostic.domain.service.DermatologistService;
-import com.DermApp.Backend.diagnostic.mapping.DematologistMapper;
+import com.DermApp.Backend.diagnostic.mapping.DermatologistMapper;
 import com.DermApp.Backend.diagnostic.resource.CreateDermatologistResource;
 import com.DermApp.Backend.diagnostic.resource.DermatologistResource;
 import com.DermApp.Backend.diagnostic.resource.UpdateDermatologistResource;
@@ -19,10 +19,10 @@ public class DermatologistsController {
 
     private final DermatologistService dermatologistService;
 
-    private final DematologistMapper mapper;
+    private final DermatologistMapper mapper;
 
 
-    public DermatologistsController(DermatologistService dermatologistService, DematologistMapper mapper) {
+    public DermatologistsController(DermatologistService dermatologistService, DermatologistMapper mapper) {
         this.dermatologistService = dermatologistService;
         this.mapper = mapper;
     }

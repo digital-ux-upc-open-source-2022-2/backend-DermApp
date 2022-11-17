@@ -12,6 +12,15 @@ public class PatientResource {
     private String name;
     private int age;
     private String address;
-    private String password;
     private String description;
+
+    private String message;
+
+    private String urlToImage;
+
+    private String status;
+
+    private String diagnostic;
+
+    private String treatment;
 }

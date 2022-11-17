@@ -19,9 +19,6 @@ public class CreatePatientResource {
     @Min(18)
     private int age;
 
-    @Size(max = 60)
-    private String password;
-
     @Size(max = 240)
     private String address;
 

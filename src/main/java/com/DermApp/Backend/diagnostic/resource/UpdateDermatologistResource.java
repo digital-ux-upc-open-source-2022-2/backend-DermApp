@@ -9,7 +9,7 @@ import javax.validation.constraints.*;
 @Setter
 public class UpdateDermatologistResource {
 
-     private Long id;
+    private Long id;
 
     @NotNull
     @NotBlank
@@ -20,8 +20,13 @@ public class UpdateDermatologistResource {
     @Min(18)
     private int age;
 
-    @Size(max = 60)
-    private String password;
+    private String gender;
+
+    private String specialty;
+
+    private String message;
+
+    private String urlToImage;
 
     @Size(max = 240)
     private String address;

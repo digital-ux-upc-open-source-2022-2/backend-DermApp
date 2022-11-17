@@ -4,6 +4,7 @@ import com.DermApp.Backend.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,6 +19,12 @@ public class Schedule extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+
+    @Size(max = 50)
+    private String name;
+
+    private String toDo;
 
 
     @ManyToMany(fetch = FetchType.EAGER)

@@ -4,6 +4,7 @@ import com.DermApp.Backend.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -19,7 +20,8 @@ public class File extends AuditModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String urlToImages;
+    @Size(max = 400)
+    private String urlToImage;
 
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER, mappedBy = "file")

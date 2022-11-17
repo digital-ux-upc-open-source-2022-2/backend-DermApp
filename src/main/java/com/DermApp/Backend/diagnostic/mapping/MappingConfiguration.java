@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 public class MappingConfiguration {
 
     @Bean
-    public DematologistMapper dematologistMapper(){
-        return new DematologistMapper();
+    public DermatologistMapper dermatologistMapper(){
+        return new DermatologistMapper();
     }
 
     @Bean
@@ -16,7 +16,25 @@ public class MappingConfiguration {
         return new PatientMapper();
     }
 
+    @Bean
+    public FileMapper fileMapper(){
+        return new FileMapper();
+    }
 
+    @Bean
+    public ChatMapper chatMapper(){
+        return new ChatMapper();
+    }
+
+    @Bean
+    public ListOfPatientMapper listOfPatientMapper(){
+        return new ListOfPatientMapper();
+    }
+
+    @Bean
+    public ScheduleMapper scheduleMapper(){
+        return new ScheduleMapper();
+    }
 
 
 }
