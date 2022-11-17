@@ -49,7 +49,7 @@ public class Dermatologist extends AuditModel {
     private String urlToImage;
 
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "list_of_patient_id", nullable = false)
+    @JoinColumn(name = "patient_id", nullable = false)
     @JsonIgnore
     private ListOfPatient listOfPatient;
 

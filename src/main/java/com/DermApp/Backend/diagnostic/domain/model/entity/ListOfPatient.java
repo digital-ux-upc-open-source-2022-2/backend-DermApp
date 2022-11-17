@@ -21,8 +21,8 @@ public class ListOfPatient extends AuditModel {
     private Long id;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "list_of_patient_patients",
-            joinColumns = @JoinColumn(name = "list_of_patient_id"),
+    @JoinTable(name = "dermatologist_patients",
+            joinColumns = @JoinColumn(name = "dermatologist_patient_id"),
             inverseJoinColumns = @JoinColumn(name = "patient_id"))
     private Set<Patient> patients = new HashSet<>();
 
