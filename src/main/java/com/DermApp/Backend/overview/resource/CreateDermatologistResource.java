@@ -16,8 +16,6 @@ public class CreateDermatologistResource {
     @Size(max = 60)
     private String name;
 
-    @Max(70)
-    @Min(18)
     private int age;
 
     @Size(max = 60)
