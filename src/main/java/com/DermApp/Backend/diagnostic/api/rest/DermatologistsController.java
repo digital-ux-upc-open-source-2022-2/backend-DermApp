@@ -26,6 +26,7 @@ public class DermatologistsController {
         this.dermatologistService = dermatologistService;
         this.mapper = mapper;
     }
+
     @GetMapping
     public Page<DermatologistResource> getAllDermatologists(Pageable pageable) {
         return mapper.modelListPage(dermatologistService.getAll(), pageable);
