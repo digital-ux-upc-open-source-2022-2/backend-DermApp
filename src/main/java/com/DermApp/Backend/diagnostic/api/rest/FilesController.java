@@ -4,7 +4,6 @@ import com.DermApp.Backend.diagnostic.domain.service.FileService;
 import com.DermApp.Backend.diagnostic.mapping.FileMapper;
 import com.DermApp.Backend.diagnostic.resource.CreateFileResource;
 import com.DermApp.Backend.diagnostic.resource.FileResource;
-import com.DermApp.Backend.diagnostic.resource.UpdateFileResource;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

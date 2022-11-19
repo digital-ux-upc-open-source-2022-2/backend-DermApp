@@ -25,12 +25,7 @@ public class MappingConfiguration {
     public ChatMapper chatMapper(){
         return new ChatMapper();
     }
-
-    @Bean
-    public ListOfPatientMapper listOfPatientMapper(){
-        return new ListOfPatientMapper();
-    }
-
+    
     @Bean
     public ScheduleMapper scheduleMapper(){
         return new ScheduleMapper();
