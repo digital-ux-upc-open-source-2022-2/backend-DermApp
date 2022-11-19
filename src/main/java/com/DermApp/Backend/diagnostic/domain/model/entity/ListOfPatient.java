@@ -32,7 +32,4 @@ public class ListOfPatient extends AuditModel {
     //Many dermatologists will have a patient list
     private Set<Dermatologist> dermatologists = new HashSet<>();
 
-
-
-
 }

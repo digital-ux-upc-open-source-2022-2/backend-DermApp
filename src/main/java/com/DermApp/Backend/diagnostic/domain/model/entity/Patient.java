@@ -59,6 +59,11 @@ public class Patient extends AuditModel {
     @JsonIgnore
     private File file;
 
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "dermatologist_id", nullable = false)
+    @JsonIgnore
+    private Dermatologist dermatologist;
+
 
 
 }

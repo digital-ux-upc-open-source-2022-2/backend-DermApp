@@ -53,6 +53,11 @@ public class Dermatologist extends AuditModel {
     @JsonIgnore
     private ListOfPatient listOfPatient;
 
+
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER, mappedBy = "dermatologist")
+    private Set<Patient> patients = new HashSet<>();
+
     @OneToOne(mappedBy = "dermatologist")
     private Chat chat;
 }

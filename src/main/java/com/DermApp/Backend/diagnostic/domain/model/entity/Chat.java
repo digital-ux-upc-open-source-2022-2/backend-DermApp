@@ -19,6 +19,10 @@ public class Chat extends AuditModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String transmitter;
+    private String receiver;
+
+
     @Size(max = 400)
     private String message;
 
