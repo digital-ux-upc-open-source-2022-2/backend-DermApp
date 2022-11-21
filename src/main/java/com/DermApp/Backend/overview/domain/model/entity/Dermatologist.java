@@ -4,6 +4,7 @@ import com.DermApp.Backend.shared.domain.model.AuditModel;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,6 +29,8 @@ public class Dermatologist extends AuditModel {
 
     private int age;
 
+    private String email;
+
     @Size(max = 60)
     private String password;
 
@@ -37,4 +40,5 @@ public class Dermatologist extends AuditModel {
     @Size(max = 400)
     private String description;
 
+    private String urlToImage;
 }

@@ -18,6 +18,8 @@ public class CreateDermatologistResource {
 
     private int age;
 
+    private String email;
+
     @Size(max = 60)
     private String password;
 
@@ -26,4 +28,6 @@ public class CreateDermatologistResource {
 
     @Size(max = 400)
     private String description;
+
+    private String urlToImage;
 }

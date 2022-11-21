@@ -20,6 +20,8 @@ public class UpdateDermatologistResource {
     @Min(18)
     private int age;
 
+    private String email;
+
     @Size(max = 60)
     private String password;
 
@@ -28,4 +30,6 @@ public class UpdateDermatologistResource {
 
     @Size(max = 400)
     private String description;
+
+    private String urlToImage;
 }
